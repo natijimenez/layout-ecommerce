@@ -1,0 +1,158 @@
+/* ESTILOS GENERALES */
+
+/* importar fuente */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* estilos variables */
+:root {
+    --font: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+    --white: #ffffff;
+    --gray: #bebebe;
+    --platinum: #646464;
+    --silver: #abacad2c;
+    --dark: #1B1F21;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+}
+
+p {
+    font-size: 1rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    padding-bottom: 0.2rem;
+}
+
+#contenedor-principal {
+    display: grid;
+    grid-template-areas:
+    "navbar navbar"
+    "sidebar gallery"
+    "footer footer"
+    ;
+    grid-template-columns: 2fr 7fr;
+}
+
+/* estilos sección navbar */
+.sectionNavbar {
+    grid-area: navbar;
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.sectionNavbar figure {
+    max-width: 100px;
+}
+
+.sectionNavbar img {
+    width: 100%;
+}
+
+/* estilos sección sidebar */
+.sectionSidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20%;
+    padding-top: 32px;
+    border-right: 1px solid var(--silver);
+}
+
+.sectionSidebar__titulo {
+    padding-top: 34px;
+    padding-bottom: 1.5rem;
+}
+
+.sectionSidebar__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.sectionSidebar__items a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.sectionSidebar__items a:hover {
+    text-decoration: underline;
+}
+
+.sectionSidebar__items span {
+    color: var(--gray);
+}
+
+/* estilos sección gallery */
+.sectionGallery {
+    grid-area: gallery;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 70px 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--silver);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card__description {
+    padding-bottom: 0.3rem;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.card__price {
+    padding-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.card__button {
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--platinum);
+    color: var(--white);
+    border: none;
+    position: sticky;
+    cursor: pointer;
+}
+
+.card__button:hover {
+    background-color: var(--gray);
+    color: var(--white);
+}
+
+/* estilos sección footer */
+.sectionFooter {
+    grid-area: footer;
+    background-color: var(--dark);
+    color: var(--white);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
